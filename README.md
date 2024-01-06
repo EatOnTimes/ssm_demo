@@ -7,3 +7,16 @@
 该框架里包含初学者常用的权限拦截器、异常处理器、处理器映射器、自定义异常、日期转换器、日期处理器、log日志、文件上传、分页助手插件
 maven里包含常用的依赖文件
 足够初学者学习使用！
+
+
+
+
+访问地址：http://localhost:8080/
+
+查询所有用户：http://localhost:8080/user/findAll
+
+通过ID查询用户：http://localhost:8080/user/findById?id=1
+
+账户金额添加：http://localhost:8080/save.jsp
+
+账户金额查询：http://localhost:8080/account/findAll
