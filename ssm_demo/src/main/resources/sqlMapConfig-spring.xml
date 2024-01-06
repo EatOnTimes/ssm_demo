@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <!--打印查询语句-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <!--定义别名-->
+    <typeAliases>
+        <!--<typeAlias type="com.demo.domain.Account" alias="account"></typeAlias>-->
+        <package name="com.demo.domain"></package>
+    </typeAliases>
+
+    <!--    注册时间类型处理器-->
+    <typeHandlers>
+        <typeHandler handler="com.demo.handler.DateTypeHandler"></typeHandler>
+    </typeHandlers>
+
+    <!--    配置分页助手插件-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+            <property name="dialect" value="mysql"/>
+        </plugin>
+    </plugins>
+
+</configuration>
